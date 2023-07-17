@@ -31,7 +31,7 @@ const reject = (rejectWithValue: Reject, error: any) => {
 
 export const increment = createAsyncThunk(
   'counter/increment',
-  async (thunkAPI, { rejectWithValue }) => {
+  async (_, { rejectWithValue }) => {
     try {
       return await counterAPI.increment();
     } catch (error: any) {
@@ -40,7 +40,7 @@ export const increment = createAsyncThunk(
 });
 export const decrement = createAsyncThunk(
   'counter/decrement',
-  async (thunkAPI, { rejectWithValue }) => {
+  async (_, { rejectWithValue }) => {
     try {
       return await counterAPI.decrement();
     } catch (error: any) {
